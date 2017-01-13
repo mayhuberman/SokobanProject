@@ -5,7 +5,7 @@ import levels.Item;
 import levels.Level;
 
 public class MyTextLevelDisplayer implements ILevelDisplayer{
-	
+	//Constructor
 	public MyTextLevelDisplayer() {
 		
 	}

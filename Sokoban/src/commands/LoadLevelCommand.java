@@ -41,7 +41,9 @@ public class LoadLevelCommand implements ICommand {
 		this._myLevel = _myLevel;
 	}
 	
-	//The method initiates the loaders hash map
+	/**
+	 * The method initiates the loaders hash map
+	 */
 	private static void init(){
 		_loadersMap = new HashMap <String, ILevelLoader>();
 		_loadersMap.put("txt", new MyTextLevelLoader());

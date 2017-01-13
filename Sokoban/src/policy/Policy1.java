@@ -12,7 +12,7 @@ public class Policy1 extends MySokobanPolicy{
 
 	}
 	
-	//The method checks if the character can move
+	
 	public boolean canCharacterMove(Item moveToItem, Item nextItem){
 		if((moveToItem.isFreeSpace())||(moveToItem.isMoveable() && nextItem.isFreeSpace())){
 			return true;

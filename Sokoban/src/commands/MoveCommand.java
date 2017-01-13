@@ -22,7 +22,11 @@ public class MoveCommand implements ICommand {
 	}
 	
 	
-	//The method checks which way the user wants the character to move to and than activates the move method in MySokobanPolicy
+	//
+	/**
+	 * The method checks which way the user wants the character
+	 * to move to and than activates the move method in MySokobanPolicy
+	 */
 	public void moveCharacter(){
 		switch(this._direction){
 		case "Right":

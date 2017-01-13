@@ -27,7 +27,9 @@ public class SaveLevelCommand implements ICommand {
 		this._fileName = fileName;
 	}
 	
-	//The method initiates the savers hash map
+	/**
+	 * The method initiates the savers hash map
+	 */
 	public static void init(){
 		_saversMap = new HashMap<String, ILevelSaver>();
 		_saversMap.put("txt", new MyTextLevelSaver());

@@ -18,7 +18,7 @@ public class MoveItemPolicy1 extends MoveItem{
 	
 	//Override methods
 	@Override
-	public boolean moveCharacter(Character character, Item moveToItem, Item nextItem) {//The method gets the character and the next two items near it
+	public boolean moveCharacter(Character character, Item moveToItem, Item nextItem) {
 		//Check if the character can move
 		if(!this.get_policy().canCharacterMove(moveToItem, nextItem)){
 			return false;

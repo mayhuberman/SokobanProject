@@ -105,8 +105,11 @@ public class Level implements Serializable{
 	}
 
 
-	
-	//The method initiates an item in the items array
+	/**
+	 * The method initiates an item in the items array
+	 * @param item the item that we want to initiate in the items array
+	 * @param p the position of the item
+	 */
 	public void initiateItemInItemsArray(Item item, Position p){
 		if(this._items.size() <= p.getP_y()){//If the position of the item is outside level boundaries
 			this._items.add(new ArrayList<Item>(p.getP_x()));//Opens a new arraylist in _items
@@ -114,7 +117,12 @@ public class Level implements Serializable{
 		this._items.get(p.getP_y()).add(item);//Add the new item to the items array
 	}
 	
-	//The method sets an item in the items array
+
+	/**
+	 * The method sets an item in the items array
+	 * @param item the item that we want to set in the items array
+	 * @param p the position of the item
+	 */
 	public void setItemInItemsArray(Item item, Position p){
 		if(this._items.size() <= p.getP_y()){//If the position of the item is outside level boundaries
 			this._items.add(new ArrayList<Item>(p.getP_x()));//Opens a new arraylist in _items
@@ -122,7 +130,12 @@ public class Level implements Serializable{
 		this._items.get(p.getP_y()).set(p.getP_x(), item);//Set the item in the items array
 	}
 	
-	//The method returns an item by position from the items array
+	
+	/**
+	 * The method returns an item by position from the items array
+	 * @param p the position that we want to check
+	 * @return the item that is in the position
+	 */
 	public Item getItemFromArrayByPosition(Position p){
 		if(p.getP_x() < 0 || p.getP_y() < 0 || p.getP_x() > this._width || p.getP_y() > this._height){//If the position is out of the boundaries
 			return null;
@@ -131,6 +144,4 @@ public class Level implements Serializable{
 	}
 
 
-	
-	
 }

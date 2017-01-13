@@ -19,6 +19,11 @@ public class Item implements Serializable{
 		this._isItemOnFinalPosition = false;
 	}
 	
+	/**
+	 * The constructor initiates an item with information if it's free space and if it's movable
+	 * @param isFreeSpace gets T value if it's a Floor or FinalPosition
+	 * @param isMoveable gets T value if it's a box
+	 */
 	public Item(boolean isFreeSpace, boolean isMoveable){
 		this._position = new Position();
 		this._isFreeSpace = isFreeSpace;

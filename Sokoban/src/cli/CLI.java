@@ -59,7 +59,10 @@ public class CLI {
 	}
 	
 	
-	//The method adds command to the commands queue
+	/**
+	 * The method adds command to the commands queue
+	 * @param commandList the commandlist that we want to add a command to
+	 */
 	public void addCommandToCommandsQueue(List<String> commandList){
 		
 		ICommand newCommand = null;
@@ -89,7 +92,10 @@ public class CLI {
 		this._commands.addLast(newCommand);//Add command to the end of the commands queue
 	}
 	
-	//The method creates MoveItem by the relevant policy
+	/**
+	 * The method creates MoveItem by the relevant policy
+	 * @return the MoveItem with the relevant policy
+	 */
 	public MoveItem moveItemCreator(){
 		String nameOfPolicy = this._myPolicy.getClass().toString().substring(13);//Set the name of the policy
 		
@@ -103,7 +109,9 @@ public class CLI {
 		return null;
 	}
 	
-	//The method activates the commands in the queue
+	/**
+	 * The method activates the commands in the queue
+	 */
 	public void doCommands(){
 		while(!(this._commands.isEmpty())){//While the command queue isn't empty
 			this._commands.removeFirst().execute();//Remove the first command and execute it
