@@ -1,8 +1,9 @@
 package displayers;
 
 import java.util.ArrayList;
-import levels.Item;
-import levels.Level;
+
+import model.data.Item;
+import model.data.Level;
 
 public class MyTextLevelDisplayer implements ILevelDisplayer{
 	//Constructor

@@ -1,9 +1,8 @@
-package move;
+package model.policy;
 
-import levels.Character;
-import levels.Item;
-import levels.Level;
-import policy.MySokobanPolicy;
+import model.data.Character;
+import model.data.Item;
+import model.data.Level;
 
 public abstract class MoveItem {
 	//Data members
@@ -41,7 +40,7 @@ public abstract class MoveItem {
 	
 	/**
 	 * The method moves the character right
-	 * @param character the character that we want to move
+	 * @param _character the character that we want to move
 	 * @return if we moved the character 
 	 */
 	public abstract boolean moveChararcterRight(Character character);

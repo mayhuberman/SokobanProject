@@ -1,7 +1,7 @@
 package commands;
 
-import levels.Character;
-import move.MoveItem;
+import model.data.Character;
+import model.policy.MoveItem;
 
 public class MoveCommand implements ICommand {
 	//Data members

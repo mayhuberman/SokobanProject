@@ -1,11 +1,9 @@
-package files;
+package model.data;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import levels.Item;
-import levels.Level;
 
 
 public class MyTextLevelSaver implements ILevelSaver{

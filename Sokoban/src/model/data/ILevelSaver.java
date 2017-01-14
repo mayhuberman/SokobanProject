@@ -1,8 +1,6 @@
-package files;
+package model.data;
 
 import java.io.IOException;
-
-import levels.Level;
 
 public interface ILevelSaver {
 	/**

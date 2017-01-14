@@ -4,12 +4,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
+
 import org.apache.commons.io.FilenameUtils;
-import files.ILevelLoader;
-import files.MyObjectLevelLoader;
-import files.MyTextLevelLoader;
-import files.MyXMLLevelLoader;
-import levels.Level;
+
+import model.data.ILevelLoader;
+import model.data.Level;
+import model.data.MyObjectLevelLoader;
+import model.data.MyTextLevelLoader;
+import model.data.MyXMLLevelLoader;
 
 public class LoadLevelCommand implements ICommand {
 	//Data members

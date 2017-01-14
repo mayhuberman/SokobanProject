@@ -1,10 +1,8 @@
-package files;
+package model.data;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-
-import levels.Level;
 
 public class MyObjectLevelSaver implements ILevelSaver{
 

@@ -2,12 +2,14 @@ package commands;
 
 import java.io.IOException;
 import java.util.HashMap;
+
 import org.apache.commons.io.FilenameUtils;
-import files.ILevelSaver;
-import files.MyObjectLevelSaver;
-import files.MyTextLevelSaver;
-import files.MyXMLLevelSaver;
-import levels.Level;
+
+import model.data.ILevelSaver;
+import model.data.Level;
+import model.data.MyObjectLevelSaver;
+import model.data.MyTextLevelSaver;
+import model.data.MyXMLLevelSaver;
 
 public class SaveLevelCommand implements ICommand {
 	//Data members

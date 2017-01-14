@@ -8,11 +8,11 @@ import commands.ICommand;
 import commands.LoadLevelCommand;
 import commands.MoveCommand;
 import commands.SaveLevelCommand;
-import levels.Level;
-import move.MoveItem;
-import move.MoveItemPolicy1;
-import policy.MySokobanPolicy;
-import policy.Policy1;
+import model.data.Level;
+import model.policy.MoveItem;
+import model.policy.MoveItemPolicy1;
+import model.policy.MySokobanPolicy;
+import model.policy.Policy1;
 
 public class CLI {
 	//Data members

@@ -1,4 +1,4 @@
-package files;
+package model.data;
 
 import java.io.IOException;
 /**
@@ -9,8 +9,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 import com.thoughtworks.xstream.XStream;
-
-import levels.Level;
 
 public class MyXMLLevelLoader implements ILevelLoader {
 	//Data members

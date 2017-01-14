@@ -1,8 +1,8 @@
-package policy;
+package model.policy;
 
-import levels.Character;
-import levels.Item;
-import levels.Level;
+import model.data.Item;
+import model.data.Level;
+import model.data.Character;
 
 
 public abstract class MySokobanPolicy {

@@ -1,4 +1,4 @@
-package files;
+package model.data;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import com.thoughtworks.xstream.XStream;
-
-import levels.Level;
 
 
 public class MyXMLLevelSaver implements ILevelSaver{

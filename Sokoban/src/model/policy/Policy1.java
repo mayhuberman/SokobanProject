@@ -1,9 +1,9 @@
-package policy;
+package model.policy;
 
-import levels.Character;
-import levels.Item;
-import levels.Level;
-import levels.Position;
+import model.data.Item;
+import model.data.Level;
+import model.data.Position;
+import model.data.Character;
 
 public class Policy1 extends MySokobanPolicy{
 	
@@ -12,14 +12,12 @@ public class Policy1 extends MySokobanPolicy{
 
 	}
 	
-	
 	public boolean canCharacterMove(Item moveToItem, Item nextItem){
 		if((moveToItem.isFreeSpace())||(moveToItem.isMoveable() && nextItem.isFreeSpace())){
 			return true;
 		}
 		return false;
 	}
-	
 	
 	public boolean canChararcterMoveLeft(Character character, Level level) {
 		Position p=new Position(character.get_position());
@@ -49,7 +47,6 @@ public class Policy1 extends MySokobanPolicy{
 		return this.canCharacterMove(i, i1);
 	}
 	
-	
 	public boolean isWinner(Level level) {
 		if(level.get_numOfBoxesOnFinalPositions()==level.get_numOfFinalPositions()){
 			System.out.println("You Won!!! :)");
@@ -57,4 +54,7 @@ public class Policy1 extends MySokobanPolicy{
 		}
 		return false;
 	}
+
+
+	
 }

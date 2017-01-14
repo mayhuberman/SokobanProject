@@ -1,13 +1,12 @@
-package move;
+package model.policy;
 
-import levels.Box;
-import levels.Character;
-import levels.FinalPosition;
-import levels.Floor;
-import levels.Item;
-import levels.Level;
-import levels.Position;
-import policy.Policy1;
+import model.data.Box;
+import model.data.FinalPosition;
+import model.data.Floor;
+import model.data.Item;
+import model.data.Level;
+import model.data.Position;
+import model.data.Character;
 
 public class MoveItemPolicy1 extends MoveItem{
 	//Constructor
