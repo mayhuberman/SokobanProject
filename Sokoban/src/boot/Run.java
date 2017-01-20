@@ -1,6 +1,6 @@
 package boot;
 
-import controller.MyController;
+import controller.Controller;
 import model.MyModel;
 import view.MyView;
 
@@ -10,9 +10,9 @@ public class Run {
 		MyView ui = new MyView();
 		MyModel m = new MyModel();
 		//Creating the contact between the view and the model to the controller
-		MyController c = new MyController(ui,m);
-		ui.addObserver(c);
-		m.addObserver(c);
+		//Controller c = new Controller(ui,m);
+		//ui.addObserver(c);
+		//m.addObserver(c);
 		
 		
 	}

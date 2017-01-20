@@ -1,8 +1,8 @@
 package commands;
 
+import commons.Level;
 import displayers.ILevelDisplayer;
 import displayers.MyTextLevelDisplayer;
-import model.data.Level;
 
 public class DisplayLevelCommand implements ICommand {
 	//Data members

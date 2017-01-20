@@ -7,8 +7,8 @@ import java.util.HashMap;
 
 import org.apache.commons.io.FilenameUtils;
 
+import commons.Level;
 import model.data.ILevelLoader;
-import model.data.Level;
 import model.data.MyObjectLevelLoader;
 import model.data.MyTextLevelLoader;
 import model.data.MyXMLLevelLoader;

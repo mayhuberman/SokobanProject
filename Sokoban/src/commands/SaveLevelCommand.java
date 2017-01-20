@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 import org.apache.commons.io.FilenameUtils;
 
+import commons.Level;
 import model.data.ILevelSaver;
-import model.data.Level;
 import model.data.MyObjectLevelSaver;
 import model.data.MyTextLevelSaver;
 import model.data.MyXMLLevelSaver;
