@@ -1,7 +1,7 @@
 package model.policy;
 
 import model.data.Item;
-import model.data.Level;
+import commons.Level;
 import model.data.Character;
 
 

@@ -1,8 +1,8 @@
 package model.policy;
 
 import model.data.Item;
-import model.data.Level;
 import model.data.Position;
+import commons.Level;
 import model.data.Character;
 
 public class Policy1 extends MySokobanPolicy{

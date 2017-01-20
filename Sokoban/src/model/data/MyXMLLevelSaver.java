@@ -8,6 +8,8 @@ import java.io.OutputStream;
 
 import com.thoughtworks.xstream.XStream;
 
+import commons.Level;
+
 
 public class MyXMLLevelSaver implements ILevelSaver{
 	//Data member

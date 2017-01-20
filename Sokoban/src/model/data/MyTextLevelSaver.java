@@ -5,6 +5,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import commons.Level;
+
 
 public class MyTextLevelSaver implements ILevelSaver{
 

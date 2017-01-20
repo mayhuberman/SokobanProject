@@ -4,6 +4,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+import commons.Level;
+
 public class MyObjectLevelSaver implements ILevelSaver{
 
 	//The method saves level to a binary level

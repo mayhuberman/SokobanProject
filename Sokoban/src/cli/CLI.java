@@ -8,7 +8,7 @@ import commands.ICommand;
 import commands.LoadLevelCommand;
 import commands.MoveCommand;
 import commands.SaveLevelCommand;
-import model.data.Level;
+import commons.Level;
 import model.policy.MoveItem;
 import model.policy.MoveItemPolicy1;
 import model.policy.MySokobanPolicy;

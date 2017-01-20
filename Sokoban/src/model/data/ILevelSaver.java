@@ -2,6 +2,8 @@ package model.data;
 
 import java.io.IOException;
 
+import commons.Level;
+
 public interface ILevelSaver {
 	/**
 	 * The method saves a level

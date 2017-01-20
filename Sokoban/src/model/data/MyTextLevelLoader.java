@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import commons.Level;
+
 public class MyTextLevelLoader implements ILevelLoader{
 	
 	//The method loads level from text file

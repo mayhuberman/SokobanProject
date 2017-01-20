@@ -1,8 +1,8 @@
 package model.policy;
 
+import commons.Level;
 import model.data.Character;
 import model.data.Item;
-import model.data.Level;
 
 public abstract class MoveItem {
 	//Data members
@@ -11,8 +11,8 @@ public abstract class MoveItem {
 	
 	//Constructor
 	public MoveItem(MySokobanPolicy policy, Level level) {
-		this._policy=policy;
-		this._level=level;
+		this._policy = policy;
+		this._level = level;
 	}
 	
 	//Get and set methods

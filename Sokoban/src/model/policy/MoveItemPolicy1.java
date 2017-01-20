@@ -1,10 +1,10 @@
 package model.policy;
 
+import commons.Level;
 import model.data.Box;
 import model.data.FinalPosition;
 import model.data.Floor;
 import model.data.Item;
-import model.data.Level;
 import model.data.Position;
 import model.data.Character;
 

@@ -10,6 +10,8 @@ import java.io.Reader;
 
 import com.thoughtworks.xstream.XStream;
 
+import commons.Level;
+
 public class MyXMLLevelLoader implements ILevelLoader {
 	//Data members
 	private Reader reader;
