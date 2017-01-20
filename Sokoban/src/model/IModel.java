@@ -1,7 +1,7 @@
 package model;
 
+import commons.Level;
 import model.data.Character;
-import model.data.Level;
 
 public interface IModel {
 	/**
