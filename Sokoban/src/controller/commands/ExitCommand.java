@@ -1,7 +1,7 @@
 package controller.commands;
 
 //The command will exit the program
-public class ExitCommand implements ICommand {
+public class ExitCommand extends Command {
 
 	@Override
 	public void execute() {

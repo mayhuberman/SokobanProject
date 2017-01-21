@@ -4,16 +4,16 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-import controller.commands.ICommand;
+import controller.commands.Command;
 
 public class Controller{
 	//Data members
-	private BlockingQueue<ICommand> _commandsQueue;
+	private BlockingQueue<Command> _commandsQueue;
 	private boolean _isExit;
 	
 	//Constructor
 	public Controller() {
-		this._commandsQueue = new ArrayBlockingQueue<ICommand>(10);
+		this._commandsQueue = new ArrayBlockingQueue<Command>(10);
 		this._isExit = false;
 	}
 	
@@ -21,7 +21,7 @@ public class Controller{
 	 * The method inserts command to the commands BlockingQueue
 	 * @param cmd the command we want to insert to the queue
 	 */
-	public void insertCommand(ICommand cmd) {
+	public void insertCommand(Command cmd) {
 		try {
 			this._commandsQueue.put(cmd);
 		} catch (InterruptedException e) {			
@@ -40,7 +40,7 @@ public class Controller{
 			public void run() {
 				while (!_isExit) {
 					try {
-						ICommand cmd = _commandsQueue.poll(1, TimeUnit.SECONDS);//polls the first command in the commands queue
+						Command cmd = _commandsQueue.poll(1, TimeUnit.SECONDS);//polls the first command in the commands queue
 						//The command can be null if the time passed until got input
 						if (cmd != null){
 							cmd.execute();//activates the command

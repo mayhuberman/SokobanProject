@@ -5,28 +5,23 @@ import java.util.HashMap;
 
 import org.apache.commons.io.FilenameUtils;
 
-import commons.Level;
+import model.IModel;
 import model.data.ILevelSaver;
 import model.data.MyObjectLevelSaver;
 import model.data.MyTextLevelSaver;
 import model.data.MyXMLLevelSaver;
 
-public class SaveLevelCommand implements ICommand {
+public class SaveLevelCommand extends Command {
 	//Data members
 	private static HashMap<String, ILevelSaver> _saversMap;
-	private ILevelSaver _mySaver;
-	private Level _myLevel;
-	private String _fileName;
+	private IModel _model;
 	
 	//Constructor
-	public SaveLevelCommand(String fileName, Level level) {
+	public SaveLevelCommand(IModel model) {
 		if(_saversMap == null){
 			SaveLevelCommand.init();
 		}
-		String typeOfFile = FilenameUtils.getExtension(fileName);//Get the .txt/.obj/.xml from the filename that the user typed
-		this._mySaver = _saversMap.get(typeOfFile);//Get the type of saver the user typed
-		this._myLevel = level;
-		this._fileName = fileName;
+		this._model = model;
 	}
 	
 	/**
@@ -42,8 +37,10 @@ public class SaveLevelCommand implements ICommand {
 	//Override method
 	@Override
 	public void execute(){
+		String typeOfFile = FilenameUtils.getExtension(this._params.get(1));//Get the .txt/.obj/.xml from the filename that the user typed
+		ILevelSaver saver = _saversMap.get(typeOfFile);//Get the type of saver the user typed
 		try {
-			this._mySaver.saveLevel(this._myLevel, this._fileName);
+			saver.saveLevel(this._model.getLevel(), this._params.get(1));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

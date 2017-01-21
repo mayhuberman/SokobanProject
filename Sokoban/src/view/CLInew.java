@@ -50,7 +50,7 @@ public class CLInew extends Observable implements IView {
 						}
 						setChanged();//Set an indication that there was a change
 						notifyObservers(params);//Notify observers about the change
-						clearChanged();//Clear the indication
+						//clearChanged();//Clear the indication
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

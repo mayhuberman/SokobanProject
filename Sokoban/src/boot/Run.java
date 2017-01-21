@@ -1,20 +1,27 @@
 package boot;
 
-import controller.Controller;
-import model.MyModel;
-import view.MyView;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+
+import controller.SokobanController;
+import model.SokobanModel;
+import view.CLInew;
 
 public class Run {
 
 	public static void main(String[] args) {
-		MyView ui = new MyView();
-		MyModel m = new MyModel();
-		//Creating the contact between the view and the model to the controller
-		//Controller c = new Controller(ui,m);
-		//ui.addObserver(c);
-		//m.addObserver(c);
+		SokobanModel model = new SokobanModel();
 		
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter writer = new PrintWriter(System.out);
+		CLInew view = new CLInew(reader, writer, "Exit");
 		
+		SokobanController controller = new SokobanController(model, view);
+		model.addObserver(controller);
+		view.addObserver(controller);
+		
+		view.start();
 	}
 
 }
