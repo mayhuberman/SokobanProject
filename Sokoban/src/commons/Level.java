@@ -147,5 +147,31 @@ public class Level implements Serializable{
 		return this._items.get(p.getP_y()).get(p.getP_x());
 	}
 
-
+	@Override
+	public String toString() {
+		String str = "";
+		for(ArrayList<Item> a : this.get_items()){
+			for(Item item : a){//For each Item in the arraylist
+				switch(item.getClass().toString().substring(13)){//check by the name of the Item
+				case "Wall":
+					str += "#";
+					break;
+				case "Box":
+					str += "@";
+					break;
+				case "Character":
+					str += "A";
+					break;
+				case "FinalPosition":
+					str += "o";
+					break;
+				case "Floor":
+					str += " ";
+					break;
+				}
+			}
+			str += "\n";//prints a new line
+		}
+		return str;
+	}
 }
