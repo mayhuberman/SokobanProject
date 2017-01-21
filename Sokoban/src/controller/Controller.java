@@ -3,7 +3,8 @@ package controller;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
-import commands.ICommand;
+
+import controller.commands.ICommand;
 
 public class Controller{
 	//Data members

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 
-import commands.ICommand;
+import controller.commands.ICommand;
 import model.IModel;
 import view.IView;
 

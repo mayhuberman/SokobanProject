@@ -2,13 +2,14 @@ package cli;
 
 import java.util.LinkedList;
 import java.util.List;
-import commands.DisplayLevelCommand;
-import commands.ExitCommand;
-import commands.ICommand;
-import commands.LoadLevelCommand;
-import commands.MoveCommand;
-import commands.SaveLevelCommand;
+
 import commons.Level;
+import controller.commands.DisplayLevelCommand;
+import controller.commands.ExitCommand;
+import controller.commands.ICommand;
+import controller.commands.LoadLevelCommand;
+import controller.commands.MoveCommand;
+import controller.commands.SaveLevelCommand;
 import model.policy.MoveItem;
 import model.policy.MoveItemPolicy1;
 import model.policy.MySokobanPolicy;
