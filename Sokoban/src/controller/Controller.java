@@ -40,9 +40,11 @@ public class Controller{
 			public void run() {
 				while (!_isExit) {
 					try {
-						Command cmd = _commandsQueue.poll(1, TimeUnit.SECONDS);//polls the first command in the commands queue
+						Command cmd = _commandsQueue.take();//takes the first command in the commands queue
+						System.out.println("debug: "+cmd.getClass());
 						//The command can be null if the time passed until got input
 						if (cmd != null){
+							System.out.println("\t is executing");
 							cmd.execute();//activates the command
 						}
 					} catch (InterruptedException e) {

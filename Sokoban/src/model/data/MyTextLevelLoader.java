@@ -14,7 +14,6 @@ public class MyTextLevelLoader implements ILevelLoader{
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		Level myLevel = new Level();
 		int x = 0 , y = 0;
-		
 		try{
 			while(reader.ready()){
 				String line;
@@ -57,7 +56,6 @@ public class MyTextLevelLoader implements ILevelLoader{
 		}catch(IOException e){
 			e.printStackTrace();
 		}
-		
 		return myLevel;
 	}
 }

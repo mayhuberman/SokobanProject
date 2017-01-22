@@ -152,7 +152,7 @@ public class Level implements Serializable{
 		String str = "";
 		for(ArrayList<Item> a : this.get_items()){
 			for(Item item : a){//For each Item in the arraylist
-				switch(item.getClass().toString().substring(13)){//check by the name of the Item
+				switch(item.getClass().toString().substring(17)){//check by the name of the Item
 				case "Wall":
 					str += "#";
 					break;

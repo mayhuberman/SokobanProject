@@ -37,9 +37,11 @@ public class SokobanController implements Observer {
 	 */
 	private void initCommands(){
 		this._commands = new HashMap<String, Command>();
-		this._commands.put("Move", new MoveCommand(this._model));
+		MoveCommand move = new MoveCommand(this._model);
+		LoadLevelCommand load = new LoadLevelCommand(this._model);
+		this._commands.put("Move", move);
 		this._commands.put("Display", new DisplayLevelCommand(this._model, this._view));
-		this._commands.put("Load", new LoadLevelCommand(this._model));
+		this._commands.put("Load", load);
 		this._commands.put("Save", new SaveLevelCommand(this._model));
 		//this._commands.put("Exit", new ExitCommand(this._model));
 	}
@@ -47,13 +49,16 @@ public class SokobanController implements Observer {
 	@Override
 	public void update(Observable o, Object arg){
 		LinkedList<String> params = (LinkedList<String>) arg;
-		String commandKey = params.removeFirst();
+		String commandKey="";
+		if(params!=null){
+			commandKey = params.removeFirst();
+		}
 		Command c = this._commands.get(commandKey);
 		if (c == null) {
 			this._view.displayMessage("Command not found");
 			return;
 		}
-		//c.setParams(params);
+		c.setParams(params);
 		this._controller.insertCommand(c);
 	}
 }

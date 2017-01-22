@@ -17,10 +17,8 @@ public class MoveCommand extends Command {
 	@Override
 	public void execute() {
 		Character character = this._model.getLevel().get_characters().get(0);
-		String direction = this._params.get(1);
+		String direction = this._params.get(0);
 		this._model.moveCharacter(direction, character);
 	}
-
-	
 
 }
