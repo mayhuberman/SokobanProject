@@ -17,7 +17,7 @@ public class SokobanModel extends Observable implements IModel{
 	//Constructors
 	public SokobanModel() {
 		//this._level = new Level();
-		this._moveFunctionality = new MoveItemPolicy1(this._level);
+		this._moveFunctionality = new MoveItemPolicy1();
 	}
 	
 	public SokobanModel(Level level, MoveItem moveFunctionality) {
@@ -31,22 +31,22 @@ public class SokobanModel extends Observable implements IModel{
 		case "Right":
 		case "right":
 		case "RIGHT":
-			this.setLevel(this._moveFunctionality.moveChararcterRight(character));
+			this.setLevel(this._moveFunctionality.moveChararcterRight(this._level, character));
 			break;
 		case "Left":
 		case "left":
 		case "LEFT":
-			this.setLevel(this._moveFunctionality.moveChararcterLeft(character));
+			this.setLevel(this._moveFunctionality.moveChararcterLeft(this._level, character));
 			break;
 		case "Up":
 		case "up":
 		case "UP":
-			this.setLevel(this._moveFunctionality.moveChararcterUp(character));
+			this.setLevel(this._moveFunctionality.moveChararcterUp(this._level, character));
 			break;
 		case "Down":
 		case "down":
 		case "DOWM":
-			this.setLevel(this._moveFunctionality.moveChararcterDown(character));
+			this.setLevel(this._moveFunctionality.moveChararcterDown(this._level, character));
 			break;
 		default:
 			throw new IllegalArgumentException("Invalid direction");
