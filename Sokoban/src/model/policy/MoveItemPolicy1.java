@@ -22,8 +22,7 @@ public class MoveItemPolicy1 extends MoveItem{
 		if(!this.get_policy().canCharacterMove(moveToItem, nextItem)){
 			return false;
 		}
-	
-		
+			
 		Item characterReplace;//Saves the place of the character that should be replace
 		
 		//Check what needs to be in the items array instead of the characters
@@ -71,7 +70,6 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(level, character, i, i1)){//If the character can move right
 				level.setLevel_numOfMoves(level.getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(level);//Check if the user won the game
-				//return true;
 			}
 		}
 		System.out.println("in move item");
@@ -88,7 +86,6 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(level, character, i, i1)){//If the character can move left
 				level.setLevel_numOfMoves(level.getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(level);//Check if the user won the game
-				//return true;
 			}
 		}
 		return level;
@@ -104,7 +101,6 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(level, character, i, i1)){//If the character can move up
 				level.setLevel_numOfMoves(level.getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(level);//Check if the user won the game
-				//return true;
 			}
 		}
 		return level;
@@ -120,7 +116,6 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(level, character, i, i1)){//If the character can move down
 				level.setLevel_numOfMoves(level.getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(level);//Check if the user won the game
-				//return true;
 			}
 		}
 		return level;

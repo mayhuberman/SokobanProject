@@ -16,7 +16,6 @@ public class SokobanModel extends Observable implements IModel{
 	
 	//Constructors
 	public SokobanModel() {
-		//this._level = new Level();
 		this._moveFunctionality = new MoveItemPolicy1();
 	}
 	
@@ -52,11 +51,9 @@ public class SokobanModel extends Observable implements IModel{
 			throw new IllegalArgumentException("Invalid direction");
 		}
 		
-		//this.setChanged();//Set an indication that there was a change
-		//this.notifyObservers();
 		LinkedList<String> params = new LinkedList<String>();
 		params.add("Display");//After we moved the character, we want to display the game with the changes
-		this.setChanged();
+		this.setChanged();//Set an indication that there was a change
 		this.notifyObservers(params);//Notify observers about the change
 	}
 

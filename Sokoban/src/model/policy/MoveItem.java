@@ -7,12 +7,10 @@ import model.data.Item;
 public abstract class MoveItem {
 	//Data members
 	private MySokobanPolicy _policy;
-	//private Level _level;
 	
 	//Constructor
 	public MoveItem(MySokobanPolicy policy) {
 		this._policy = policy;
-		//this._level = level;
 	}
 	
 	//Get and set methods
@@ -20,17 +18,10 @@ public abstract class MoveItem {
 		return _policy;
 	}
 	
-/*	public Level get_level() {
-		return _level;
-	}
-
-	public void set_level(Level _level) {
-		this._level = _level;
-	}*/
-	
-	//Abstract method
+	//Abstract methods
 	/**
 	 * The method moves the character
+	 * @param level the level that we want to move the character in
 	 * @param character the character that we want to move
 	 * @param moveToItem the item that is next to the character
 	 * @param nextItem the item that is second next to the character
@@ -40,6 +31,7 @@ public abstract class MoveItem {
 	
 	/**
 	 * The method moves the character right
+	 * @param level the level that we want to move the character in
 	 * @param _character the character that we want to move
 	 * @return if we moved the character 
 	 */
@@ -47,6 +39,7 @@ public abstract class MoveItem {
 	
 	/**
 	 * The method moves the character left
+	 * @param level the level that we want to move the character in
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
@@ -54,6 +47,7 @@ public abstract class MoveItem {
 	
 	/**
 	 * The method moves the character up
+	 * @param level the level that we want to move the character in
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
@@ -61,6 +55,7 @@ public abstract class MoveItem {
 	
 	/**
 	 * The method moves the character down
+	 * @param level the level that we want to move the character in
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
