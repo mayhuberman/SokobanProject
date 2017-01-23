@@ -19,7 +19,7 @@ public class MyTextLevelSaver implements ILevelSaver{
 		
 		for(ArrayList<Item> a : level.get_items()){
 			for(Item item : a){
-				switch(item.getClass().toString().substring(13)){//Get the item type class name
+				switch(item.getClass().toString().substring(17)){//Get the item type class name
 				case "Wall":
 					bw.write("#");
 					break;
@@ -39,7 +39,13 @@ public class MyTextLevelSaver implements ILevelSaver{
 			}
 			bw.write(System.lineSeparator());//Write new line
 		}
-		//fw.close();
-		bw.close();
+		
+		if (bw != null){
+			bw.close();
+		}
+
+		if (fw != null){
+			fw.close();
+		}
 	}
 }
