@@ -43,27 +43,27 @@ public abstract class MoveItem {
 	 * @param _character the character that we want to move
 	 * @return if we moved the character 
 	 */
-	public abstract boolean moveChararcterRight(Character character);
+	public abstract Level moveChararcterRight(Character character);
 	
 	/**
 	 * The method moves the character left
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
-	public abstract boolean moveChararcterLeft(Character character);
+	public abstract Level moveChararcterLeft(Character character);
 	
 	/**
 	 * The method moves the character up
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
-	public abstract boolean moveChararcterUp(Character character);
+	public abstract Level moveChararcterUp(Character character);
 	
 	/**
 	 * The method moves the character down
 	 * @param character the character that we want to move
 	 * @return if we moved the character 
 	 */
-	public abstract boolean moveChararcterDown(Character character);
+	public abstract Level moveChararcterDown(Character character);
 	
 }

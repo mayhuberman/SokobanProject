@@ -52,9 +52,11 @@ public class SokobanController implements Observer {
 		String commandKey="";
 		if(params!=null){
 			commandKey = params.removeFirst();
+			System.out.println("command key :"+commandKey);
 		}
 		Command c = this._commands.get(commandKey);
 		if (c == null) {
+			System.out.println("aaa");
 			this._view.displayMessage("Command not found");
 			return;
 		}

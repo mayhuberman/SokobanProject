@@ -37,10 +37,10 @@ public class SaveLevelCommand extends Command {
 	//Override method
 	@Override
 	public void execute(){
-		String typeOfFile = FilenameUtils.getExtension(this._params.get(1));//Get the .txt/.obj/.xml from the filename that the user typed
+		String typeOfFile = FilenameUtils.getExtension(this._params.get(0));//Get the .txt/.obj/.xml from the filename that the user typed
 		ILevelSaver saver = _saversMap.get(typeOfFile);//Get the type of saver the user typed
 		try {
-			saver.saveLevel(this._model.getLevel(), this._params.get(1));
+			saver.saveLevel(this._model.getLevel(), this._params.get(0));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

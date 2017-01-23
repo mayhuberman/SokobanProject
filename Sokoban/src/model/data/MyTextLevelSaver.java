@@ -39,7 +39,7 @@ public class MyTextLevelSaver implements ILevelSaver{
 			}
 			bw.write(System.lineSeparator());//Write new line
 		}
-		fw.close();
+		//fw.close();
 		bw.close();
 	}
 }

@@ -62,7 +62,7 @@ public class MoveItemPolicy1 extends MoveItem{
 	}
 
 	@Override
-	public boolean moveChararcterRight(Character character) {
+	public Level moveChararcterRight(Character character) {
 		Position p1 = new Position(character.get_position().getP_x()+1, character.get_position().getP_y());//The position on the right to the character
 		Item i = this.get_level().getItemFromArrayByPosition(p1);
 		Position p2 = new Position(character.get_position().getP_x()+2, character.get_position().getP_y());//The position on the right of i
@@ -71,14 +71,15 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(character, i, i1)){//If the character can move right
 				this.get_level().setLevel_numOfMoves(this.get_level().getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(this.get_level());//Check if the user won the game
-				return true;
+				//return true;
 			}
 		}
-		return false;
+		System.out.println("in move item");
+		return this.get_level();
 	}
 
 	@Override
-	public boolean moveChararcterLeft(Character character) {
+	public Level moveChararcterLeft(Character character) {
 		Position p1 = new Position(character.get_position().getP_x()-1, character.get_position().getP_y());//The position on the left to the character
 		Item i = this.get_level().getItemFromArrayByPosition(p1);
 		Position p2 = new Position(character.get_position().getP_x()-2, character.get_position().getP_y());//The position on the left of i
@@ -87,14 +88,14 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(character, i, i1)){//If the character can move left
 				this.get_level().setLevel_numOfMoves(this.get_level().getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(this.get_level());//Check if the user won the game
-				return true;
+				//return true;
 			}
 		}
-		return false;
+		return this.get_level();
 	}
 
 	@Override
-	public boolean moveChararcterUp(Character character) {
+	public Level moveChararcterUp(Character character) {
 		Position p1 = new Position(character.get_position().getP_x(), character.get_position().getP_y()-1);//The position up to the character
 		Item i = this.get_level().getItemFromArrayByPosition(p1);
 		Position p2 = new Position(character.get_position().getP_x(), character.get_position().getP_y()-2);//The position up to i
@@ -103,14 +104,14 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(character, i, i1)){//If the character can move up
 				this.get_level().setLevel_numOfMoves(this.get_level().getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(this.get_level());//Check if the user won the game
-				return true;
+				//return true;
 			}
 		}
-		return false;
+		return this.get_level();
 	}
 
 	@Override
-	public boolean moveChararcterDown(Character character) {
+	public Level moveChararcterDown(Character character) {
 		Position p1 = new Position(character.get_position().getP_x(), character.get_position().getP_y()+1);//The position down to the character
 		Item i = this.get_level().getItemFromArrayByPosition(p1);
 		Position p2 = new Position(character.get_position().getP_x(), character.get_position().getP_y()+2);//The position down to i
@@ -119,9 +120,9 @@ public class MoveItemPolicy1 extends MoveItem{
 			if(this.moveCharacter(character, i, i1)){//If the character can move down
 				this.get_level().setLevel_numOfMoves(this.get_level().getLevel_numOfMoves()+1);//Increase numOfMoves by one
 				this.get_policy().isWinner(this.get_level());//Check if the user won the game
-				return true;
+				//return true;
 			}
 		}
-		return false;
+		return this.get_level();
 	}
 }

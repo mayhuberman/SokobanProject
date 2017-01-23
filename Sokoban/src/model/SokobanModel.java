@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Observable;
 
 import commons.Level;
+import controller.commands.Command;
 import model.data.Character;
 import model.policy.MoveItem;
 import model.policy.MoveItemPolicy1;
@@ -15,7 +16,7 @@ public class SokobanModel extends Observable implements IModel{
 	
 	//Constructors
 	public SokobanModel() {
-		this._level = new Level();
+		//this._level = new Level();
 		this._moveFunctionality = new MoveItemPolicy1(this._level);
 	}
 	
@@ -30,34 +31,33 @@ public class SokobanModel extends Observable implements IModel{
 		case "Right":
 		case "right":
 		case "RIGHT":
-			this._moveFunctionality.moveChararcterRight(character);
+			this.setLevel(this._moveFunctionality.moveChararcterRight(character));
 			break;
 		case "Left":
 		case "left":
 		case "LEFT":
-			this._moveFunctionality.moveChararcterLeft(character);
+			this.setLevel(this._moveFunctionality.moveChararcterLeft(character));
 			break;
 		case "Up":
 		case "up":
 		case "UP":
-			this._moveFunctionality.moveChararcterUp(character);
+			this.setLevel(this._moveFunctionality.moveChararcterUp(character));
 			break;
 		case "Down":
 		case "down":
 		case "DOWM":
-			this._moveFunctionality.moveChararcterDown(character);
+			this.setLevel(this._moveFunctionality.moveChararcterDown(character));
 			break;
 		default:
 			throw new IllegalArgumentException("Invalid direction");
 		}
 		
-		this.setChanged();//Set an indication that there was a change
-		this.notifyObservers();
+		//this.setChanged();//Set an indication that there was a change
+		//this.notifyObservers();
 		LinkedList<String> params = new LinkedList<String>();
 		params.add("Display");//After we moved the character, we want to display the game with the changes
 		this.setChanged();
 		this.notifyObservers(params);//Notify observers about the change
-		//this.clearChanged();//Clear the indication
 	}
 
 	@Override
