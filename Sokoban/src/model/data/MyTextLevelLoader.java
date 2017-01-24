@@ -10,7 +10,8 @@ import commons.Level;
 public class MyTextLevelLoader implements ILevelLoader{
 	
 	//The method loads level from text file
-	 public Level loadLevel(InputStream is) {
+	 @Override
+	public Level loadLevel(InputStream is) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		Level myLevel = new Level();
 		int x = 0 , y = 0;

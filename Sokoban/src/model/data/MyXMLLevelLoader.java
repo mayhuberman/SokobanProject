@@ -24,6 +24,7 @@ public class MyXMLLevelLoader implements ILevelLoader {
 	}
 	
 	//The method loads level from xml file
+	@Override
 	public Level loadLevel(InputStream is) {
 		try {
 			this.reader = new InputStreamReader(is);

@@ -12,6 +12,7 @@ public class Policy1 extends MySokobanPolicy{
 
 	}
 	
+	@Override
 	public boolean canCharacterMove(Item moveToItem, Item nextItem){
 		if((moveToItem.isFreeSpace())||(moveToItem.isMoveable() && nextItem.isFreeSpace())){
 			return true;
@@ -19,6 +20,7 @@ public class Policy1 extends MySokobanPolicy{
 		return false;
 	}
 	
+	@Override
 	public boolean canChararcterMoveLeft(Character character, Level level) {
 		Position p=new Position(character.get_position());
 		Item i = level.get_items().get(p.getP_y()).get(p.getP_x()-1);//The item on the left to the character
@@ -26,6 +28,7 @@ public class Policy1 extends MySokobanPolicy{
 		return this.canCharacterMove(i, i1);
 	}
 
+	@Override
 	public boolean canChararcterMoveRight(Character character, Level level) {
 		Position p=new Position(character.get_position());
 		Item i = level.get_items().get(p.getP_y()).get(p.getP_x()+1);//The item on the right to the character
@@ -33,6 +36,7 @@ public class Policy1 extends MySokobanPolicy{
 		return this.canCharacterMove(i, i1);
 	}
 
+	@Override
 	public boolean canChararcterMoveUp(Character character, Level level) {
 		Position p=new Position(character.get_position());
 		Item i = level.get_items().get(p.getP_y()-1).get(p.getP_x());//The item up to the character
@@ -40,6 +44,7 @@ public class Policy1 extends MySokobanPolicy{
 		return this.canCharacterMove(i, i1);
 	}
 
+	@Override
 	public boolean canChararcterMoveDown(Character character, Level level) {
 		Position p=new Position(character.get_position());
 		Item i = level.get_items().get(p.getP_y()+1).get(p.getP_x());//The item down to the character
@@ -47,6 +52,7 @@ public class Policy1 extends MySokobanPolicy{
 		return this.canCharacterMove(i, i1);
 	}
 	
+	@Override
 	public boolean isWinner(Level level) {
 		if(level.get_numOfBoxesOnFinalPositions()==level.get_numOfFinalPositions()){
 			System.out.println("You Won!!! :)");

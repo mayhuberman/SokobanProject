@@ -13,6 +13,7 @@ public class MyObjectLevelLoader implements ILevelLoader {
 	}
 	
 	//The method loads level from binary file
+	@Override
 	public Level loadLevel(InputStream is){
 		
 		ObjectInputStream in;

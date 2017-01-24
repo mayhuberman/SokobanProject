@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.Observable;
 
 import commons.Level;
-import controller.commands.Command;
 import model.data.Character;
 import model.policy.MoveItem;
 import model.policy.MoveItemPolicy1;
